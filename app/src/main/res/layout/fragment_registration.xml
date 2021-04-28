@@ -65,18 +65,6 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints">
 
-            <!--            <com.google.android.material.textfield.TextInputLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:helperText="required"-->
-            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-            <!--               >-->
-            <!--                <com.google.android.material.textfield.TextInputEditText-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:hint="New" />-->
-            <!--                -->
-            <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
             <EditText
                 android:id="@+id/name"
@@ -203,8 +191,8 @@
             android:id="@+id/sendBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Sign in"
+            android:layout_marginTop="35dp"
+            android:text="Sign up"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.467"
             app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +205,8 @@
             android:rotation="-45"
             android:src="@drawable/bottom_background"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
-            tools:layout_editor_absoluteX="-21dp" />
+            tools:layout_editor_absoluteX="-21dp"
+            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -227,7 +216,8 @@
             android:rotation="-45"
             android:src="@drawable/bottom_background"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="62dp" />
+            tools:layout_editor_absoluteX="62dp"
+            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

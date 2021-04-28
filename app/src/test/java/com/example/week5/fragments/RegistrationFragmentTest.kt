@@ -5,20 +5,20 @@ import org.junit.Test
 
 class RegistrationFragmentTest{
 
-    var validName = RegistrationFragment()
+    var validator = RegistrationFragment()
 
-   @Test
-  fun validNameTest(){
-      assertEquals(true, validName.validName())
-   }
+//   @Test
+//  fun validNameTest(){
+//      assertEquals(true, validator.validName())
+//   }
 
     @Test
     fun validNumberTest(){
-        assertEquals(true, validName.validNumber("09087654321"))
+        assertEquals(true, validator.validNumber("09087654321"))
     }
     @Test
     fun validEmailTest(){
-        assertEquals(true, validName.validEmail("akoziemmanuel@gmail.com"))
+        assertEquals(true, validator.validEmail("akoziemmanuel@gmail.com"))
     }
 
 

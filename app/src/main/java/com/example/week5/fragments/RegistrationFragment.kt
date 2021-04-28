@@ -34,7 +34,6 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private lateinit var email: EditText
     private lateinit var sendBtn: Button
     private lateinit var name: EditText
-    private var existingUsers = listOf<String>("Ade John", "Bola Mary")
 
 
 
@@ -58,12 +57,11 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
         spinner?.onItemSelectedListener = this
 
 
-
         /**
          * DISABLE BUTTON FOR AN EMPTY FIELD
          * */
-        sendBtn.isEnabled =
-            !(name.text.isEmpty() && phoneNumber.text.isEmpty() && email.text.isEmpty())
+//        sendBtn.isEnabled =
+//            !(name.text.isEmpty() && phoneNumber.text.isEmpty() && email.text.isEmpty())
 
 
 
@@ -74,9 +72,14 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
         communicator = activity as Communicator
 
         sendBtn.setOnClickListener {
+            if(name.text.isEmpty() && phoneNumber.text.isEmpty() && email.text.isEmpty()){
+                Toast.makeText(context, "Input your details", Toast.LENGTH_SHORT).show()
+            } else if(validEmail(email.text.toString()) && validNumber(phoneNumber.text.toString())) {
                 communicator.passData(name.text.toString(), phoneNumber.text.toString(), email.text.toString(), spinner.selectedItem.toString())
+            }else{
+                Toast.makeText(context, "Input your correct details", Toast.LENGTH_SHORT).show()
+            }
         }
-
 
         return view
     }
@@ -146,15 +149,15 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
 
-    fun validName():Boolean{
-        var isValid: Boolean
-        val name = "Ade John"
-        if (name.isEmpty() && name in existingUsers){
-            isValid = false
-        }
-        isValid = name.length > 2
-        return isValid
-    }
+//    fun validName():Boolean{
+//        var isValid: Boolean
+//        val name = "Ade John"
+//        if (name.isEmpty() && name in existingUsers){
+//            isValid = false
+//        }
+//        isValid = name.length > 2
+//        return isValid
+//    }
 
 
 

@@ -3,55 +3,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/grey"
     android:layout_height="match_parent"
     tools:context=".fragments.ProfileFragment">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="414dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <!-- TODO: Update blank fragment layout -->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/displayName"
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="141dp" />
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ellipse" />
 
-    <TextView
-        android:id="@+id/displayPhoneNumber"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintTop_toBottomOf="@+id/displayName"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_gravity="fill"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-    <TextView
-        android:id="@+id/displayEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintTop_toBottomOf="@+id/displayPhoneNumber"
-        tools:layout_editor_absoluteX="0dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/displayGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintTop_toBottomOf="@+id/displayEmail"
-        tools:layout_editor_absoluteX="0dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="15dp">
 
-</LinearLayout>
+                <RelativeLayout
+                    android:layout_width="192dp"
+                    android:layout_height="287dp"
+                    android:layout_gravity="fill">
+
+                    <TextView
+                        android:id="@+id/displayName"
+                        android:layout_width="177dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="AliExpress"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/displayEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_below="@+id/displayName"
+                        android:layout_marginTop="46dp"
+                        android:gravity="center"
+                        android:text="from 4%"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="151dp"
+                    android:layout_height="277dp"
+                    android:layout_gravity="fill">
+
+                    <TextView
+                        android:id="@+id/displayPhoneNumber"
+                        android:layout_width="121dp"
+                        android:layout_height="46dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="23dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="AliExpress"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/displayGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_marginTop="94dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="from 4%"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:layout_width="528dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp"
+        android:rotation="45"
+        android:src="@drawable/bottom_background"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="528dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="134dp"
+        android:rotation="45"
+        android:src="@drawable/bottom_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

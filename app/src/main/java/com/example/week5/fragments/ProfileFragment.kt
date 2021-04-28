@@ -50,6 +50,7 @@ class ProfileFragment : Fragment() {
         displayEmail.text = displayMessageEmail
         displayGender.text = displayMessageGender
 
+
         return view
     }
 

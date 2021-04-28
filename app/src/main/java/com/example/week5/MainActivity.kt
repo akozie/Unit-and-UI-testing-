@@ -40,6 +40,6 @@ class MainActivity : AppCompatActivity(), Communicator {
         profileFragment.arguments = bundle
 
         transaction.replace(R.id.frame, profileFragment)
-        transaction.commit()
+            .addToBackStack(null).commit()
     }
 }
