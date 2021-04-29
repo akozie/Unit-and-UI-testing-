@@ -7,18 +7,41 @@ class RegistrationFragmentTest{
 
     var validator = RegistrationFragment()
 
-//   @Test
-//  fun validNameTest(){
-//      assertEquals(true, validator.validName())
-//   }
-
+    /**
+     * TESTING VALID INPUTS
+     * */
     @Test
     fun validNumberTest(){
         assertEquals(true, validator.validNumber("09087654321"))
     }
+
+    @Test
+    fun validNumberSecondTest(){
+        assertEquals(true, validator.validNumber("2349087654321"))
+    }
+
+    @Test
+    fun validNumberThirdTest(){
+        assertEquals(true, validator.validNumber("+2349087654321"))
+    }
+
+
     @Test
     fun validEmailTest(){
         assertEquals(true, validator.validEmail("akoziemmanuel@gmail.com"))
+    }
+
+    /**
+     * TESTING INVALID INPUTS
+     * */
+    @Test
+    fun inValidNumberTest(){
+        assertEquals(false, validator.validNumber("99087654321"))
+    }
+
+    @Test
+    fun inValidEmailTest(){
+        assertEquals(false, validator.validEmail("@gmail.com"))
     }
 
 

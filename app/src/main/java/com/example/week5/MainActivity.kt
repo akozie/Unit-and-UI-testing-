@@ -12,11 +12,17 @@ class MainActivity : AppCompatActivity(), Communicator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /**
+         * INSTANCE OF THE REGISTRATIONFRAGMENT CLASS
+         * */
+
         val registrationFragment = RegistrationFragment()
         currentFragment(registrationFragment)
-
-
     }
+
+    /**
+     * REPLACING THE FRAME LAYOUT WITH THE CURRENT FRAGMENT
+     * */
     private fun currentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frame, fragment)
@@ -25,6 +31,9 @@ class MainActivity : AppCompatActivity(), Communicator {
 
 
 
+    /**
+     * USING BUNDLE TO SAVE DATA
+     * */
     override fun passData(
         editTextInput: String, editNumberInput: String, editEmailInput: String,
         editGenderInput: String

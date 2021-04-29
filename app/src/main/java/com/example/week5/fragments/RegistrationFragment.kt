@@ -57,12 +57,6 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
         spinner?.onItemSelectedListener = this
 
 
-        /**
-         * DISABLE BUTTON FOR AN EMPTY FIELD
-         * */
-//        sendBtn.isEnabled =
-//            !(name.text.isEmpty() && phoneNumber.text.isEmpty() && email.text.isEmpty())
-
 
 
 
@@ -147,20 +141,6 @@ class RegistrationFragment : Fragment(), AdapterView.OnItemSelectedListener {
         val check = number.matcher(text)
         return check.matches()
     }
-
-
-//    fun validName():Boolean{
-//        var isValid: Boolean
-//        val name = "Ade John"
-//        if (name.isEmpty() && name in existingUsers){
-//            isValid = false
-//        }
-//        isValid = name.length > 2
-//        return isValid
-//    }
-
-
-
 }
 
 
